@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kotlin1Lesson5</string>
+    <string name="playlist">playlist</string>
+    <string name="emotional_well_being_healing_practices_for_children"><![CDATA[Emotional Well-being & Healing Practices for Children]]></string>
+    <string name="videoSeries">32 video series</string>
+    <string name="test">Test</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="try_again">Try again</string>
+</resources>
