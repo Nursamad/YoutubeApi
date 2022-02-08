@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlin1lesson5.base.BaseActivity
 import com.example.kotlin1lesson5.base.BaseViewModel
 import com.example.kotlin1lesson5.databinding.ActivityMainBinding
+import com.example.kotlin1lesson5.extentions.showToast
 import com.example.kotlin1lesson5.models.Items
 import com.example.kotlin1lesson5.ui.details.DetailsActivity
 import com.example.kotlin1lesson5.ui.internet.Connect
@@ -52,9 +53,11 @@ class MainActivity : BaseActivity<BaseViewModel, ActivityMainBinding>() {
             if (it) {
                 binding.checkInet.connectInet.isVisible = false
                 binding.recyclerView.isVisible = true
+                showToast("Internet connected!  ")
             } else {
                 binding.checkInet.connectInet.isVisible = true
                 binding.recyclerView.isVisible = false
+                showToast("Internet no connect!")
             }
         })
     }

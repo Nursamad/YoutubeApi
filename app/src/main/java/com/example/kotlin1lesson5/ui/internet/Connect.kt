@@ -17,15 +17,12 @@ class Connect(private val context: Context) : LiveData<Boolean>() {
         context.getSystemService(Context.CONNECTIVITY_SERVICE)
                 as ConnectivityManager
 
-    private lateinit var checkCallback: ConnectivityManager.NetworkCallback
-
     @SuppressLint("ObsoleteSdkInt")
     override fun onActive() {
         super.onActive()
         update()
         when {
             Build.VERSION.SDK_INT >= N -> {
-
                 connectivityManager.registerDefaultNetworkCallback(connectivityManagerCallback())
             }
 
